@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <title>Admin Panel - My Blog</title>
+    <link rel="stylesheet" type="text/css" href="admindex.css" />
+</h:head>
+<h:body>
+    <!-- Üst menü çubuğu -->
+    <div class="top-bar">
+        <div class="logo">
+            <h1>Admin Panel</h1>
+        </div>
+        <div class="user-profile">
+            <img src="images/avatar.png" alt="Profil Fotoğrafı"/>
+            <span>Hammus</span>
+            <a href="logout.xhtml">Çıkış Yap</a>
+        </div>
+    </div>
+
+    <!-- Ana içerik bölümü -->
+    <div class="content">
+        <div class="sidebar">
+            <h2>Menü</h2>
+            <ul>
+                <li><a href="#add-post">Yeni Gönderi Ekle</a></li>
+                <li><a href="#manage-posts">Gönderileri Yönet</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <!-- Yeni gönderi ekle bölümü -->
+            <div class="section" id="add-post">
+                <h2>Yeni Gönderi Ekle</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="title">Başlık:</label>
+                        <input type="text" id="title" name="title" required="required"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">İçerik:</label>
+                        <textarea id="content" name="content" rows="5" required="required"></textarea>
+                    </div>
+                    <button type="submit">Gönderi Ekle</button>
+                </form>
+            </div>
+
+            <!-- Gönderileri yönet bölümü -->
+            <div class="section" id="manage-posts">
+                <h2>Gönderileri Yönet</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Başlık</th>
+                        <th>İçerik</th>
+                        <th>İşlemler</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Örnek veri -->
+                    <tr>
+                        <td>1</td>
+                        <td>Blog Gönderisi 1</td>
+                        <td>Bu gönderi içeriğidir...</td>
+                        <td>
+                            <button class="edit">Düzenle</button>
+                            <button class="delete">Sil</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Blog Gönderisi 2</td>
+                        <td>Bu gönderi içeriğidir...</td>
+                        <td>
+                            <button class="edit">Düzenle</button>
+                            <button class="delete">Sil</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Blog Gönderisi 3</td>
+                        <td>Bu gönderi içeriğidir...</td>
+                        <td>
+                            <button class="edit">Düzenle</button>
+                            <button class="delete">Sil</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</h:body>
+</html>
